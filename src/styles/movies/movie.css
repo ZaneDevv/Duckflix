@@ -1,0 +1,28 @@
+.movie-card {
+    width: 90%;
+    max-width: 150px;
+}
+
+.movie-card img {
+    border-radius: 8px;
+    width: 100%;
+}
+
+.movie-card:hover img {
+    animation: hover-movie 100ms ease-in-out;
+    transform: scale(var(--scale-hover));
+}
+
+/* ---------------------------------------------------------------------------------------
+    ANIMATIONS
+--------------------------------------------------------------------------------------- */
+
+@keyframes hover-movie {
+    from {
+        transform: scale(1)
+    }
+
+    to {
+        transform: scale(var(--scale-hover));
+    }
+}
