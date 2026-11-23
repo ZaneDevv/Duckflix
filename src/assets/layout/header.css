@@ -1,0 +1,43 @@
+header {
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header > h1 {
+    vertical-align: center;
+    width: fit-content;
+}
+
+header > h1::before {
+    content: ' ';
+
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 50px;
+    height: 50px;
+    
+    background-image: url('/favicon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 414px) {
+    header > h1::before {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }   
+}

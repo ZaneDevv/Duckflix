@@ -1,0 +1,51 @@
+#searcher {
+    height: 25px;
+    max-width: 500px;
+    width: 100%;
+
+    border-radius: 1rem;
+    border: 1px solid black;
+
+    overflow: hidden;
+
+    padding: 0;
+
+    position: relative;
+}
+
+#searcher input[type="text"] {
+    padding-left: 0.5rem;
+
+    position: absolute;
+
+    background-color: transparent;
+    border: 0;
+
+    width: calc(100% - 25px);
+    height: 100%;
+
+    display: inline-block;
+}
+
+#searcher input[type="text"]:focus {
+    outline: 0;
+}
+
+#searcher button {
+    position: absolute;
+    background-color: transparent;
+
+    right: 0;
+    width: 25px;
+
+    border: 0
+}
+
+#searcher button img {
+    width: 100%;
+    height: 100%;
+}
+
+#searcher button:hover {
+    cursor: pointer
+}
