@@ -4,12 +4,6 @@
 
 Movie information is retrieved from an external API, providing movie titles and posters.
 
-## 📸 Preview
-
-![Duckflix Preview](docs/duckflix-preview.png)
-
-*Duckflix displaying search results for "spider".*
-
 ## ✨ Features
 
 - 🔍 **Movie Search** — Search for movies by title or keyword.
@@ -46,7 +40,7 @@ Make sure you have installed:
 **1. Clone the repository**
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/duckflix.git
+git clone https://github.com/ZaneDevv/duckflix.git
 ```
 
 **2. Navigate to the project directory**
