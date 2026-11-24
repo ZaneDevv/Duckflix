@@ -20,6 +20,10 @@
     // -------------------------------------------------------------------
 
     const capitalizeFirst = (string) => string[0].toUpperCase() + string.substring(1).toLowerCase();
+
+    const limitTitle = (title) => title.length > MAXIMUM_TITLE_CHARACTERS_TO_RENDER
+                ? (title.substring(0, MAXIMUM_TITLE_CHARACTERS_TO_RENDER) + "...")
+                : title;
 </script>
 
 <!------------------------------------------------------------
@@ -33,12 +37,7 @@
             <img src="/failed_image.png" :alt="title">
         </picture>
 
-        <h3>{{
-            title.length > MAXIMUM_TITLE_CHARACTERS_TO_RENDER
-                ? (title.substring(0, MAXIMUM_TITLE_CHARACTERS_TO_RENDER) + "...")
-                : title
-        }}</h3>
-
+        <h3>{{ limitTitle(title)}}</h3>
         <p>{{ capitalizeFirst(genre) }}</p>
     </article>
 </template>
