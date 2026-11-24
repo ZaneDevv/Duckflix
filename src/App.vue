@@ -1,14 +1,22 @@
+<!------------------------------------------------------------
+    JAVASCRIPT
+------------------------------------------------------------->
+
 <script setup>
     import Card from "./components/Card.vue";
     import { moviesData, loadMovies } from "./scripts/moviesLoader.js";
 </script>
+
+<!------------------------------------------------------------
+    HTML
+------------------------------------------------------------->
 
 <template>
     <header>
         <h1>Duckflix</h1>
 
         <div id="searcher">
-            <input id="seaching-input" type="text" placeholder="Search..." @input="loadMovies()">
+            <input id="seaching-input" type="text" placeholder="Search..." onerror="setDefaultImage()" @input="loadMovies()">
             <button id="search" title="Search" @click="loadMovies()">
                 <img alt="Search" src="/search.svg">
             </button>
@@ -17,7 +25,10 @@
 
     <main>
         <div id="cards-container">
-            <Card v-for="movieData of moviesData" :key="movieData.id" :thumbnail="movieData.thumbnail" :title="movieData.title" genre="show" />
+            <Card
+                v-for="movieData of moviesData"
+                :key="movieData.id" :thumbnail="movieData.thumbnail" :title="movieData.title" :genre="movieData.genre"
+            />
         </div>
     </main>
 

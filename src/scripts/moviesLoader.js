@@ -18,7 +18,9 @@ export let moviesData = ref([]);
  */
 export function loadMovies(page = 1)
 {
-    fetch(`${API_URL}&s=${document.getElementById("seaching-input").value}&page=${page}`)
+    const name = document.getElementById("seaching-input").value.trim();
+
+    fetch(`${API_URL}&s=${name}&page=${page}`)
         .then(data => data.json())
         .then(data => {
             moviesData.value = [];
@@ -27,6 +29,7 @@ export function loadMovies(page = 1)
                 moviesData.value.push({
                     title: cardData.Title,
                     thumbnail: cardData.Poster,
+                    genre: cardData.Type
                 });
         })
         .catch(console.warn);
